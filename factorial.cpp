@@ -1,13 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int factorial(int n){
+    if(n>=1){
+        return n*factorial(n-1);
+    }
+    return 1;
+}
 main(){
     int a;
     cin >> a;
-    unsigned long long factorial = 1;
-    for(int i = a; i>0 ;i--){
-        factorial *= i; 
-    }
-    printf("%llu",factorial);
+    int fact = factorial(a);
+    printf("%llu",fact);
     return 0;
 }
